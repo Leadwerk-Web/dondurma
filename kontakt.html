@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontakt · Dondurma</title>
+    <meta name="description" content="Kugel anfragen bei Dondurma Gelato GmbH in Berlin. Name, E-Mail, Wunschsorte, Nachricht.">
+    <link rel="icon" href="svg/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dd">
+    <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+    <header class="site-header" data-lw-section="header">
+        <a class="brand" href="index.html" data-lw-page-ref="dd-home-v1">
+            <img src="svg/logo.svg" alt="Dondurma" data-lw-global="header.logo" data-lw-type="image">
+            <span data-lw-global="header.brand" data-lw-type="text">Dondurma</span>
+        </a>
+        <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html" data-lw-page-ref="dd-home-v1"><span data-lw-global="nav.home" data-lw-type="text">Start</span></a>
+        <a href="sortiment.html" data-lw-page-ref="dd-sortiment-v1"><span data-lw-global="nav.sortiment" data-lw-type="text">Sortiment</span></a>
+        <a href="ueber-uns.html" data-lw-page-ref="dd-about-v1"><span data-lw-global="nav.about" data-lw-type="text">Über uns</span></a>
+        <a href="konto.html" data-lw-page-ref="dd-konto-v1"><span data-lw-global="nav.konto" data-lw-type="text">Konto</span></a>
+        <a href="kontakt.html" data-lw-page-ref="dd-contact-v1" aria-current="page"><span data-lw-global="nav.contact" data-lw-type="text">Kontakt</span></a>
+        </nav>
+        <div class="header-actions">
+            <a class="cart-link" href="warenkorb.html" data-lw-page-ref="dd-cart-v1" aria-label="Warenkorb">
+                <span aria-hidden="true">K</span>
+                <span class="cart-count" data-basket-count>0</span>
+            </a>
+            <a class="btn" href="sortiment.html" data-lw-page-ref="dd-sortiment-v1" data-lw-global="header.cta.url" data-lw-type="page_reference"><span data-lw-global="header.cta.label" data-lw-type="text">Kugel finden</span></a>
+        </div>
+    </header>
+    <main id="inhalt">
+        <section class="section" data-lw-section="contact">
+            <p class="eyebrow" data-lw-field="contact.eyebrow" data-lw-type="text">Bestellanfrage</p>
+            <h1 data-lw-field="contact.title" data-lw-type="text">Sag uns, welche Kugel es werden soll.</h1>
+            <p class="lead" data-lw-field="contact.lead" data-lw-type="textarea">Dondurma Gelato GmbH, Oranienstraße 12, 10999 Berlin. Telefon 030 000000. Schreib uns die Sorte aus dem Korb, wir halten das Kontingent.</p>
+            <p class="form-success" data-form-success hidden data-lw-field="contact.success" data-lw-type="text">Danke. Wir haben die Anfrage gelesen und packen die Kugeln.</p>
+            <form id="kontakt-form" class="form" data-kontakt-form action="kontakt.html" method="post">
+                <label>Name
+                    <input type="text" name="name" required>
+                </label>
+                <label>E-Mail
+                    <input type="email" name="email" required>
+                </label>
+                <label>Gewünschte Sorte
+                    <input type="text" name="sorte">
+                </label>
+                <label>Nachricht
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    Ich habe die <a href="datenschutz.html" data-lw-page-ref="dd-datenschutz-v1">Datenschutzerklärung</a> gelesen.
+                </label>
+                <button class="btn" type="submit">Kugel anfragen</button>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer" data-lw-section="footer">
+        <div>
+            <p data-lw-global="footer.tagline" data-lw-type="text">Die schönsten Eiskugeln der Welt, als Becher, nicht nur als Foto.</p>
+            <p data-lw-global="footer.copyright" data-lw-type="text">© 2026 Dondurma Gelato GmbH</p>
+        </div>
+        <nav aria-label="Rechtliches">
+            <a href="impressum.html" data-lw-page-ref="dd-impressum-v1">Impressum</a>
+            ·
+            <a href="datenschutz.html" data-lw-page-ref="dd-datenschutz-v1">Datenschutz</a>
+            ·
+            <a href="registrieren.html" data-lw-page-ref="dd-register-v1">Mitglied werden</a>
+        </nav>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

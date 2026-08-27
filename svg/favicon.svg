@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Dondurma">
+  <rect width="32" height="32" rx="8" fill="#e85a71"/>
+  <circle cx="16" cy="13" r="7" fill="#fff4ea"/>
+  <path d="M13 19 L16 27 L19 19 Z" fill="#d4a574"/>
+</svg>

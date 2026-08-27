@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sortiment · Dondurma</title>
+    <meta name="description" content="Katalog der Dondurma-Kugeln: Firenze, Istanbul, Kyoto, Bangkok, Buenos Aires, Tahiti, Roma und Wien.">
+    <link rel="icon" href="svg/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dd">
+    <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+    <header class="site-header" data-lw-section="header">
+        <a class="brand" href="index.html" data-lw-page-ref="dd-home-v1">
+            <img src="svg/logo.svg" alt="Dondurma" data-lw-global="header.logo" data-lw-type="image">
+            <span data-lw-global="header.brand" data-lw-type="text">Dondurma</span>
+        </a>
+        <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html" data-lw-page-ref="dd-home-v1"><span data-lw-global="nav.home" data-lw-type="text">Start</span></a>
+        <a href="sortiment.html" data-lw-page-ref="dd-sortiment-v1" aria-current="page"><span data-lw-global="nav.sortiment" data-lw-type="text">Sortiment</span></a>
+        <a href="ueber-uns.html" data-lw-page-ref="dd-about-v1"><span data-lw-global="nav.about" data-lw-type="text">Über uns</span></a>
+        <a href="konto.html" data-lw-page-ref="dd-konto-v1"><span data-lw-global="nav.konto" data-lw-type="text">Konto</span></a>
+        <a href="kontakt.html" data-lw-page-ref="dd-contact-v1"><span data-lw-global="nav.contact" data-lw-type="text">Kontakt</span></a>
+        </nav>
+        <div class="header-actions">
+            <a class="cart-link" href="warenkorb.html" data-lw-page-ref="dd-cart-v1" aria-label="Warenkorb">
+                <span aria-hidden="true">K</span>
+                <span class="cart-count" data-basket-count>0</span>
+            </a>
+            <a class="btn" href="sortiment.html" data-lw-page-ref="dd-sortiment-v1" data-lw-global="header.cta.url" data-lw-type="page_reference"><span data-lw-global="header.cta.label" data-lw-type="text">Kugel finden</span></a>
+        </div>
+    </header>
+    <main id="inhalt">
+        <section class="section" data-lw-section="catalog">
+            <p class="eyebrow" data-lw-field="catalog.eyebrow" data-lw-type="text">Katalog</p>
+            <h1 data-lw-field="catalog.title" data-lw-type="text">Acht Orte, acht Kugeln.</h1>
+            <p class="lead" data-lw-field="catalog.lead" data-lw-type="textarea">Filter nach Region, lege Becher in den Korb, bestelle spaeter per Anfrage. Preise gelten je Becher.</p>
+            <div class="filters" role="group" aria-label="Regionen">
+                <button type="button" class="is-active" data-filter="all">Alle</button>
+                <button type="button" data-filter="europa">Europa</button>
+                <button type="button" data-filter="asien">Asien</button>
+                <button type="button" data-filter="amerika">Amerika</button>
+                <button type="button" data-filter="inseln">Inseln</button>
+            </div>
+            <div class="grid" data-lw-repeater="sortiment.items">
+                <article class="card" data-lw-item-key="firenze" data-region="europa">
+                    <img src="assets/cover-firenze.jpg" alt="Pistazieneis in einem Becher, cremig grün" data-lw-field="sortiment.items.image" data-lw-type="image">
+                    <div class="card-body">
+                        <p class="meta" data-lw-field="sortiment.items.meta" data-lw-type="text">Becher · Europa</p>
+                        <h3 data-lw-field="sortiment.items.title" data-lw-type="text">Pistazie Firenze</h3>
+                        <p data-lw-field="sortiment.items.text" data-lw-type="text">Bronte-Pistazie, samtig, leicht salzig. Die Kugel, nach der Florenz schmeckt.</p>
+                        <p class="price" data-lw-field="sortiment.items.price" data-lw-type="text">8 Euro</p>
+                        <p>
+                            <a class="btn btn--line" href="firenze.html" data-lw-page-ref="dd-firenze-v1">Details</a> <button class="btn" type="button" data-add="firenze" data-tour-title="Pistazie Firenze" data-tour-price="8" data-tour-image="assets/cover-firenze.jpg">In den Korb</button>
+                        </p>
+                    </div>
+                </article>
+                <article class="card" data-lw-item-key="istanbul" data-region="asien">
+                    <img src="assets/cover-istanbul.jpg" alt="Türkisches Eis in einem Becher mit langer Kelle" data-lw-field="sortiment.items.image" data-lw-type="image">
+                    <div class="card-body">
+                        <p class="meta" data-lw-field="sortiment.items.meta" data-lw-type="text">Becher · Asien</p>
+                        <h3 data-lw-field="sortiment.items.title" data-lw-type="text">Dondurma Istanbul</h3>
+                        <p data-lw-field="sortiment.items.text" data-lw-type="text">Dehnbares Milch-Eis mit Mastix und Salep. Streetfood vom Bosporus.</p>
+                        <p class="price" data-lw-field="sortiment.items.price" data-lw-type="text">9 Euro</p>
+                        <p>
+                            <a class="btn btn--line" href="istanbul.html" data-lw-page-ref="dd-istanbul-v1">Details</a> <button class="btn" type="button" data-add="istanbul" data-tour-title="Dondurma Istanbul" data-tour-price="9" data-tour-image="assets/cover-istanbul.jpg">In den Korb</button>
+                        </p>
+                    </div>
+                </article>
+                <article class="card" data-lw-item-key="kyoto" data-region="asien">
+                    <img src="assets/cover-kyoto.jpg" alt="Matcha-Eis mit gruener Creme" data-lw-field="sortiment.items.image" data-lw-type="image">
+                    <div class="card-body">
+                        <p class="meta" data-lw-field="sortiment.items.meta" data-lw-type="text">Becher · Asien</p>
+                        <h3 data-lw-field="sortiment.items.title" data-lw-type="text">Matcha Kyoto</h3>
+                        <p data-lw-field="sortiment.items.text" data-lw-type="text">Erste Ernte, bitter-süß, kalt. Tempelgarten in einer Kugel.</p>
+                        <p class="price" data-lw-field="sortiment.items.price" data-lw-type="text">10 Euro</p>
+                        <p>
+                            <a class="btn btn--line" href="kyoto.html" data-lw-page-ref="dd-kyoto-v1">Details</a> <button class="btn" type="button" data-add="kyoto" data-tour-title="Matcha Kyoto" data-tour-price="10" data-tour-image="assets/cover-kyoto.jpg">In den Korb</button>
+                        </p>
+                    </div>
+                </article>
+                <article class="card" data-lw-item-key="bangkok" data-region="asien">
+                    <img src="assets/cover-bangkok.jpg" alt="Mango-Eis mit Fruchtstuecken" data-lw-field="sortiment.items.image" data-lw-type="image">
+                    <div class="card-body">
+                        <p class="meta" data-lw-field="sortiment.items.meta" data-lw-type="text">Becher · Asien</p>
+                        <h3 data-lw-field="sortiment.items.title" data-lw-type="text">Mango Bangkok</h3>
+                        <p data-lw-field="sortiment.items.text" data-lw-type="text">Reife Nam-Dok-Mai, Kokosmilch, ein Hauch Limette.</p>
+                        <p class="price" data-lw-field="sortiment.items.price" data-lw-type="text">7 Euro</p>
+                        <p>
+                            <a class="btn btn--line" href="bangkok.html" data-lw-page-ref="dd-bangkok-v1">Details</a> <button class="btn" type="button" data-add="bangkok" data-tour-title="Mango Bangkok" data-tour-price="7" data-tour-image="assets/cover-bangkok.jpg">In den Korb</button>
+                        </p>
+                    </div>
+                </article>
+                <article class="card" data-lw-item-key="buenos" data-region="amerika">
+                    <img src="assets/cover-buenos.jpg" alt="Karamelleis in einem Becher" data-lw-field="sortiment.items.image" data-lw-type="image">
+                    <div class="card-body">
+                        <p class="meta" data-lw-field="sortiment.items.meta" data-lw-type="text">Becher · Amerika</p>
+                        <h3 data-lw-field="sortiment.items.title" data-lw-type="text">Dulce Buenos Aires</h3>
+                        <p data-lw-field="sortiment.items.text" data-lw-type="text">Gekochte Milch, Karamell, eine Prise Meersalz. Tango fuer die Zunge.</p>
+                        <p class="price" data-lw-field="sortiment.items.price" data-lw-type="text">8 Euro</p>
+                        <p>
+                            <button class="btn" type="button" data-add="buenos" data-tour-title="Dulce Buenos Aires" data-tour-price="8" data-tour-image="assets/cover-buenos.jpg">In den Korb</button>
+                        </p>
+                    </div>
+                </article>
+                <article class="card" data-lw-item-key="tahiti" data-region="inseln">
+                    <img src="assets/cover-tahiti.jpg" alt="Vanilleeis mit Schote" data-lw-field="sortiment.items.image" data-lw-type="image">
+                    <div class="card-body">
+                        <p class="meta" data-lw-field="sortiment.items.meta" data-lw-type="text">Becher · Inseln</p>
+                        <h3 data-lw-field="sortiment.items.title" data-lw-type="text">Vanille Tahiti</h3>
+                        <p data-lw-field="sortiment.items.text" data-lw-type="text">Dicke Vanilleschoten, Sahne, weiches Finish. Urlaub ohne Flug.</p>
+                        <p class="price" data-lw-field="sortiment.items.price" data-lw-type="text">11 Euro</p>
+                        <p>
+                            <button class="btn" type="button" data-add="tahiti" data-tour-title="Vanille Tahiti" data-tour-price="11" data-tour-image="assets/cover-tahiti.jpg">In den Korb</button>
+                        </p>
+                    </div>
+                </article>
+                <article class="card" data-lw-item-key="roma" data-region="europa">
+                    <img src="assets/cover-roma.jpg" alt="Stracciatella-Eis mit Schokoladenstuecken" data-lw-field="sortiment.items.image" data-lw-type="image">
+                    <div class="card-body">
+                        <p class="meta" data-lw-field="sortiment.items.meta" data-lw-type="text">Becher · Europa</p>
+                        <h3 data-lw-field="sortiment.items.title" data-lw-type="text">Stracciatella Roma</h3>
+                        <p data-lw-field="sortiment.items.text" data-lw-type="text">Fior di latte und dunkle Schokostuecke. Piazza in der Hand.</p>
+                        <p class="price" data-lw-field="sortiment.items.price" data-lw-type="text">8 Euro</p>
+                        <p>
+                            <button class="btn" type="button" data-add="roma" data-tour-title="Stracciatella Roma" data-tour-price="8" data-tour-image="assets/cover-roma.jpg">In den Korb</button>
+                        </p>
+                    </div>
+                </article>
+                <article class="card" data-lw-item-key="wien" data-region="europa">
+                    <img src="assets/cover-wien.jpg" alt="Kaffee-Eis mit Sahne" data-lw-field="sortiment.items.image" data-lw-type="image">
+                    <div class="card-body">
+                        <p class="meta" data-lw-field="sortiment.items.meta" data-lw-type="text">Becher · Europa</p>
+                        <h3 data-lw-field="sortiment.items.title" data-lw-type="text">Melange Wien</h3>
+                        <p data-lw-field="sortiment.items.text" data-lw-type="text">Kaffee, Schlagobers, Kakao. Nachmittag am Ring, kalt serviert.</p>
+                        <p class="price" data-lw-field="sortiment.items.price" data-lw-type="text">9 Euro</p>
+                        <p>
+                            <button class="btn" type="button" data-add="wien" data-tour-title="Melange Wien" data-tour-price="9" data-tour-image="assets/cover-wien.jpg">In den Korb</button>
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" data-lw-section="footer">
+        <div>
+            <p data-lw-global="footer.tagline" data-lw-type="text">Die schönsten Eiskugeln der Welt, als Becher, nicht nur als Foto.</p>
+            <p data-lw-global="footer.copyright" data-lw-type="text">© 2026 Dondurma Gelato GmbH</p>
+        </div>
+        <nav aria-label="Rechtliches">
+            <a href="impressum.html" data-lw-page-ref="dd-impressum-v1">Impressum</a>
+            ·
+            <a href="datenschutz.html" data-lw-page-ref="dd-datenschutz-v1">Datenschutz</a>
+            ·
+            <a href="registrieren.html" data-lw-page-ref="dd-register-v1">Mitglied werden</a>
+        </nav>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
