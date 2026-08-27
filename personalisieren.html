@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dein Becher · Dondurma</title>
+    <meta name="description" content="Stelle deinen Dondurma-Becher zusammen: Sorte, Größe und Toppings. Der Preisrechner zeigt den Becherpreis live.">
+    <link rel="icon" href="svg/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dd">
+    <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+    <header class="site-header" data-lw-section="header">
+        <a class="brand" href="index.html" data-lw-page-ref="dd-home-v1">
+            <img src="svg/logo.svg" alt="Dondurma" data-lw-global="header.logo" data-lw-type="image">
+            <span data-lw-global="header.brand" data-lw-type="text">Dondurma</span>
+        </a>
+        <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html" data-lw-page-ref="dd-home-v1"><span data-lw-global="nav.home" data-lw-type="text">Start</span></a>
+        <a href="sortiment.html" data-lw-page-ref="dd-sortiment-v1"><span data-lw-global="nav.sortiment" data-lw-type="text">Sortiment</span></a>
+        <a href="personalisieren.html" data-lw-page-ref="dd-personal-v1" aria-current="page"><span data-lw-global="nav.personal" data-lw-type="text">Dein Becher</span></a>
+        <a href="ueber-uns.html" data-lw-page-ref="dd-about-v1"><span data-lw-global="nav.about" data-lw-type="text">Über uns</span></a>
+        <a href="konto.html" data-lw-page-ref="dd-konto-v1"><span data-lw-global="nav.konto" data-lw-type="text">Konto</span></a>
+        <a href="kontakt.html" data-lw-page-ref="dd-contact-v1"><span data-lw-global="nav.contact" data-lw-type="text">Kontakt</span></a>
+        </nav>
+        <div class="header-actions">
+            <a class="cart-link" href="warenkorb.html" data-lw-page-ref="dd-cart-v1" aria-label="Warenkorb">
+                <span aria-hidden="true">K</span>
+                <span class="cart-count" data-basket-count>0</span>
+            </a>
+            <a class="btn" href="sortiment.html" data-lw-page-ref="dd-sortiment-v1" data-lw-global="header.cta.url" data-lw-type="page_reference"><span data-lw-global="header.cta.label" data-lw-type="text">Kugel finden</span></a>
+        </div>
+    </header>
+    <main id="inhalt">
+        <section class="section" data-lw-section="builder-intro">
+            <p class="eyebrow" data-lw-field="builder.eyebrow" data-lw-type="text">Personalisieren</p>
+            <h1 data-lw-field="builder.title" data-lw-type="text">Dein Becher. Dein Preis.</h1>
+            <p class="lead" data-lw-field="builder.lead" data-lw-type="textarea">Wähle Größe, Sorte und Toppings. Links siehst du den Becher, rechts rechnet der Preis live. Danach liegt er im Warenkorb.</p>
+        </section>
+        <section class="section builder" data-lw-section="builder" data-builder>
+            <div class="builder-stage">
+                <img src="assets/cover-firenze.jpg" alt="Aktuelle Sorte als Cover" data-builder-photo data-lw-field="builder.preview" data-lw-type="image">
+                <div class="cone-stack" aria-hidden="true">
+                    <span class="cone-scoop is-mittel" data-builder-scoop></span>
+                    <span class="cone-topping" data-builder-topping="crunch" style="bottom: 228px; left: 38%; background: #c48a4f;"></span>
+                    <span class="cone-topping" data-builder-topping="sahne" style="bottom: 242px; left: 54%; background: #fff4ea;"></span>
+                    <span class="cone-topping" data-builder-topping="schoko" style="bottom: 214px; left: 62%; background: #3a2420;"></span>
+                    <span class="cone-body"></span>
+                </div>
+            </div>
+            <div class="builder-panel">
+                <div>
+                    <p class="meta" data-lw-field="builder.sizeLabel" data-lw-type="text">Größe</p>
+                    <div class="choice-grid" role="group" aria-label="Größe">
+                        <button class="choice" type="button" data-size="klein">Klein<br><strong>6 Euro</strong></button>
+                        <button class="choice is-active" type="button" data-size="mittel">Mittel<br><strong>8 Euro</strong></button>
+                        <button class="choice" type="button" data-size="gross">Groß<br><strong>11 Euro</strong></button>
+                    </div>
+                </div>
+                <div>
+                    <p class="meta" data-lw-field="builder.flavorLabel" data-lw-type="text">Sorte</p>
+                    <div class="choice-grid" role="group" aria-label="Sorte">
+                        <button class="choice is-active" type="button" data-flavor="firenze">
+                            <img src="assets/cover-firenze.jpg" alt="Pistazie Firenze">
+                            <span><span class="swatch" style="background:#7bc47f"></span>Firenze +2</span>
+                        </button>
+                        <button class="choice" type="button" data-flavor="istanbul">
+                            <img src="assets/cover-istanbul.jpg" alt="Dondurma Istanbul">
+                            <span><span class="swatch" style="background:#e85a71"></span>Istanbul +3</span>
+                        </button>
+                        <button class="choice" type="button" data-flavor="kyoto">
+                            <img src="assets/cover-kyoto.jpg" alt="Matcha Kyoto">
+                            <span><span class="swatch" style="background:#5aa35f"></span>Kyoto +4</span>
+                        </button>
+                        <button class="choice" type="button" data-flavor="bangkok">
+                            <img src="assets/cover-bangkok.jpg" alt="Mango Bangkok">
+                            <span><span class="swatch" style="background:#f7c948"></span>Bangkok +1</span>
+                        </button>
+                        <button class="choice" type="button" data-flavor="buenos">
+                            <img src="assets/cover-buenos.jpg" alt="Dulce Buenos Aires">
+                            <span><span class="swatch" style="background:#d4a574"></span>Buenos +2</span>
+                        </button>
+                        <button class="choice" type="button" data-flavor="tahiti">
+                            <img src="assets/cover-tahiti.jpg" alt="Vanille Tahiti">
+                            <span><span class="swatch" style="background:#fff4ea"></span>Tahiti +5</span>
+                        </button>
+                        <button class="choice" type="button" data-flavor="roma">
+                            <img src="assets/cover-roma.jpg" alt="Stracciatella Roma">
+                            <span><span class="swatch" style="background:#f3efe8"></span>Roma +2</span>
+                        </button>
+                        <button class="choice" type="button" data-flavor="wien">
+                            <img src="assets/cover-wien.jpg" alt="Melange Wien">
+                            <span><span class="swatch" style="background:#8a645c"></span>Wien +3</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p class="meta" data-lw-field="builder.toppingLabel" data-lw-type="text">Toppings</p>
+                    <div class="choice-grid" role="group" aria-label="Toppings">
+                        <button class="choice" type="button" data-topping="crunch">Krokant<br><strong>+1 Euro</strong></button>
+                        <button class="choice" type="button" data-topping="sahne">Sahne<br><strong>+1 Euro</strong></button>
+                        <button class="choice" type="button" data-topping="schoko">Schoko<br><strong>+2 Euro</strong></button>
+                    </div>
+                </div>
+                <div class="builder-total">
+                    <p>Becherpreis<br><strong class="total" data-builder-total>10 Euro</strong></p>
+                    <button class="btn" type="button" data-builder-add data-add="becher-firenze-mittel" data-tour-title="Pistazie Firenze · mittel" data-tour-price="10" data-tour-image="assets/cover-firenze.jpg">In den Korb</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" data-lw-section="footer">
+        <div>
+            <p data-lw-global="footer.tagline" data-lw-type="text">Die schönsten Eiskugeln der Welt, als Becher, nicht nur als Foto.</p>
+            <p data-lw-global="footer.copyright" data-lw-type="text">© 2026 Dondurma Gelato GmbH</p>
+        </div>
+        <nav aria-label="Rechtliches">
+            <a href="impressum.html" data-lw-page-ref="dd-impressum-v1">Impressum</a>
+            ·
+            <a href="datenschutz.html" data-lw-page-ref="dd-datenschutz-v1">Datenschutz</a>
+            ·
+            <a href="registrieren.html" data-lw-page-ref="dd-register-v1">Mitglied werden</a>
+        </nav>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

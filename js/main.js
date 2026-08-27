@@ -250,4 +250,85 @@
   paintCartCount();
   paintCartPage();
   paintAccount();
+
+  var builder = doc.querySelector("[data-builder]");
+  if (builder) {
+    var flavors = {
+      firenze: { title: "Pistazie Firenze", extra: 2, color: "#7bc47f", image: "assets/cover-firenze.jpg" },
+      istanbul: { title: "Dondurma Istanbul", extra: 3, color: "#e85a71", image: "assets/cover-istanbul.jpg" },
+      kyoto: { title: "Matcha Kyoto", extra: 4, color: "#5aa35f", image: "assets/cover-kyoto.jpg" },
+      bangkok: { title: "Mango Bangkok", extra: 1, color: "#f7c948", image: "assets/cover-bangkok.jpg" },
+      buenos: { title: "Dulce Buenos Aires", extra: 2, color: "#d4a574", image: "assets/cover-buenos.jpg" },
+      tahiti: { title: "Vanille Tahiti", extra: 5, color: "#fff4ea", image: "assets/cover-tahiti.jpg" },
+      roma: { title: "Stracciatella Roma", extra: 2, color: "#f3efe8", image: "assets/cover-roma.jpg" },
+      wien: { title: "Melange Wien", extra: 3, color: "#8a645c", image: "assets/cover-wien.jpg" }
+    };
+    var sizes = { klein: 6, mittel: 8, gross: 11 };
+    var toppingPrices = { crunch: 1, sahne: 1, schoko: 2 };
+    var toppingLabels = { crunch: "Krokant", sahne: "Sahne", schoko: "Schoko" };
+    var sizeLabels = { klein: "klein", mittel: "mittel", gross: "gross" };
+    var state = { size: "mittel", flavor: "firenze", toppings: {} };
+
+    function selectedToppings() {
+      return Object.keys(toppingPrices).filter(function (key) { return state.toppings[key]; });
+    }
+    function builderPrice() {
+      return sizes[state.size] + flavors[state.flavor].extra + selectedToppings().reduce(function (sum, key) {
+        return sum + toppingPrices[key];
+      }, 0);
+    }
+    function builderTitle() {
+      var extras = selectedToppings().map(function (key) { return toppingLabels[key]; });
+      var label = flavors[state.flavor].title + " · " + sizeLabels[state.size];
+      if (extras.length) label += " · " + extras.join(", ");
+      return label;
+    }
+    function paintBuilder() {
+      var flavor = flavors[state.flavor];
+      var photo = builder.querySelector("[data-builder-photo]");
+      var scoop = builder.querySelector("[data-builder-scoop]");
+      var total = builder.querySelector("[data-builder-total]");
+      var add = builder.querySelector("[data-builder-add]");
+      if (photo) photo.src = flavor.image;
+      if (scoop) {
+        scoop.style.background = flavor.color;
+        scoop.classList.remove("is-klein", "is-mittel", "is-gross");
+        scoop.classList.add("is-" + state.size);
+      }
+      builder.querySelectorAll("[data-builder-topping]").forEach(function (node) {
+        node.classList.toggle("is-on", Boolean(state.toppings[node.getAttribute("data-builder-topping")]));
+      });
+      builder.querySelectorAll("[data-size]").forEach(function (node) {
+        node.classList.toggle("is-active", node.getAttribute("data-size") === state.size);
+      });
+      builder.querySelectorAll("[data-flavor]").forEach(function (node) {
+        node.classList.toggle("is-active", node.getAttribute("data-flavor") === state.flavor);
+      });
+      builder.querySelectorAll("[data-topping]").forEach(function (node) {
+        node.classList.toggle("is-active", Boolean(state.toppings[node.getAttribute("data-topping")]));
+      });
+      if (total) total.textContent = builderPrice() + " Euro";
+      if (add) {
+        var toppingKey = selectedToppings().join("-");
+        add.setAttribute("data-add", "becher-" + state.flavor + "-" + state.size + (toppingKey ? "-" + toppingKey : ""));
+        add.setAttribute("data-tour-title", builderTitle());
+        add.setAttribute("data-tour-price", String(builderPrice()));
+        add.setAttribute("data-tour-image", flavor.image);
+      }
+    }
+    builder.addEventListener("click", function (event) {
+      if (event.target.closest("[data-builder-add]")) return;
+      var size = event.target.closest("[data-size]");
+      var flavorBtn = event.target.closest("[data-flavor]");
+      var topping = event.target.closest("[data-topping]");
+      if (size) state.size = size.getAttribute("data-size") || state.size;
+      if (flavorBtn) state.flavor = flavorBtn.getAttribute("data-flavor") || state.flavor;
+      if (topping) {
+        var key = topping.getAttribute("data-topping");
+        state.toppings[key] = !state.toppings[key];
+      }
+      paintBuilder();
+    });
+    paintBuilder();
+  }
 }());
